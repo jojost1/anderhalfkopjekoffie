@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<title>Anderhalf Kopje Koffie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+#all {
+  width: 100%;
+  height: 100%;
+}
+#zwartblok {
+  position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 100px;
+    background-color: black;
+}
+#zwartblok h6 {
+  position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#startknop {
+  position: absolute;
+    top:400px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+}
+.resize_fit_center {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+
+p, #delayedText22 {
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity:0;
+    transition: opacity 3.5s;
+}
+
+</style>
+
+<body>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand" id="all">
+
+<center><p id="delayedText1"><i>Verteld door Geerlof</i></p></center>
+<center><p id="delayedText2">"Dus..."</p></center>
+<center><p id="delayedText3">We besloten met 4 link leden uit te gaan: Justin, Jori, Bart en ik.</p></center>
+<center><p id="delayedText4">We waren bij Justin aan het indrinken, want hij woonde daar net 2 weken.</p></center>
+<center><p id="delayedText5">Ik vroeg Justin dus of hij een kopje koffie kon zetten, maar hij had nog geen koffiezetapparaat.</p></center>
+<center><p id="delayedText6">Toen zei Jori dat hij wel een koffieapparaat had en dat hij om de hoek woonde.</p></center>
+<center><p id="delayedText7">Dus na een tijdje besloten we om naar Jori zn kamer te lopen om een kopje koffie te zetten.</p></center>
+<center><p id="delayedText8"><i>We moesten ook nog een klein stukje omlopen omdat Jori een Pokémon moest vangen.</i></p></center>
+<center><p id="delayedText9">Eenmaal aangekomen bij Jori zn kleine kamer zagen we dat hij ook een heel klein apparaatje had.</p></center>
+<center><p id="delayedText10">Hij kon namelijk maar <strong>anderhalf kopje</strong> zetten.</p></center>
+<center><p id="delayedText11">Maar dat was geen probleem, want ik was toch de enige die koffie wou.</p></center>
+<center><p id="delayedText12">Toen zei Justin dat hij ook wel wat koffie lustte..</p></center>
+<center><p id="delayedText13">..maar hij hoefde maar een half kopje, dus dat kon Jori nog net zetten.</p></center>
+<center><p id="delayedText14"> </p></center>
+<center><p id="delayedText15">"Dat was het."</p></center>
+<center><p id="delayedText16"> </p></center>
+<center><p id="delayedText17">Oh en Justin sprong uit het raam en we deden toen het raam dicht.</p></center>
+<center><p id="delayedText18">En Jori had precies 4 chocoladekoekjes en we waren ook met zijn vieren.</p></center>
+<center><p id="delayedText19">En er hing een raar apparaatje aan de muur bij Jori, dus ik vroeg wat dat was..</p></center>
+<center><p id="delayedText20">..toen zei hij dat dat een anti-tijger apparaat was, maar dat kan niet want ik kwam wel gewoon binnen.</p></center>
+<center><p id="delayedText21"> </p></center>
+<center><a id="delayedText22" href="/lmao"><strong>Bedankt voor uw aandacht. Je wordt nu doorverwezen naar LMAO.</strong></a></center>
+
+<div id="startknop">
+  <a onclick="startKnop();fadeOutEffect1();fadeOutEffect2();setTimeout(startStory,300);" href="#">
+    <img class='resize_fit_center' src="http://www.minke-makelaardij.nl/wp-content/uploads/2015/08/play-icon.png"/>
+    </a>
+</div>
+
+<div id="zwartblok">
+
+<!-- Story -->
+  <div style="line-height: 90px">
+    <div style="max-width:700px" id="center">
+<h6 class="w3-center"><span class="w3-tag w3-wide">ANDERHALF KOPJE KOFFIE</span></h5>
+
+<script>
+function startKnop()
+{
+  var audio = new Audio('titanicflute.mp3');
+  audio.play();
+}
+
+function fadeOutEffect1() {
+    var fadeTarget = document.getElementById("startknop");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity == 0.01) {
+            clearInterval(fadeEffect);
+        } else {
+            fadeTarget.style.opacity -= 0.01;
+        }
+    }, 50);
+}
+
+function fadeOutEffect2() {
+    var fadeTarget = document.getElementById("zwartblok");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity == 0.01) {
+            clearInterval(fadeEffect);
+        } else {
+            fadeTarget.style.opacity -= 0.01;
+        }
+    }, 50);
+}
+
+function startStory() {
+  console.log("started story");
+  showText('delayedText1', 1);
+  showText('delayedText2', 2);
+  showText('delayedText3', 3);
+  showText('delayedText4', 4);
+  showText('delayedText5', 5);
+  showText('delayedText6', 6);
+  showText('delayedText7', 7);
+  showText('delayedText8', 8);
+  showText('delayedText9', 9);
+  showText('delayedText10', 10);
+  showText('delayedText11', 11);
+  showText('delayedText12', 12);
+  showText('delayedText13', 13);
+  showText('delayedText14', 14);
+  showText('delayedText15', 15);
+  showText('delayedText16', 16);
+  showText('delayedText17', 17);
+  showText('delayedText18', 18);
+  showText('delayedText19', 19);
+  showText('delayedText20', 20);
+  showText('delayedText21', 21);
+  showText('delayedText22', 22);
+}
+
+function showText(id, delay) {
+  console.log("showing text");
+    var elem = document.getElementById(id);
+    setTimeout(function () {
+        elem.style.opacity = 1;
+    }, delay * 6500);
+
+    if (delay != 22) {
+    console.log("go away text");
+      setTimeout(function () {
+          elem.style.opacity = 0;
+      }, delay * 6500 + 4000);
+    } else {
+      setTimeout(function () {
+          window.location.href = "/lmao";
+      }, delay * 6500 + 4000);
+    }
+}
+
+//window.onload = function () {
+    //showText('delayedText1', 1);
+    //showText('delayedText2', 2);
+    //showText('delayedText3', 3);
+    //showText('delayedText4', 4);
+//}
+
+</script>
+
+<!--
+<center><p><i>Verteld door Geerlof</i></p>
+  <audio controls>
+  <source src="titanicflute.mp3" type="audio/mpeg">
+</audio>
+        <br>
+        <p>We besloten met 4 link leden uit te gaan: Justin, Jori, Bart en ik.</p>
+        <p>We waren bij Justin aan het indrinken, want hij woonde daar net 2 weken.</p>
+        <p>Ik vroeg Justin dus of hij een kopje koffie kon zetten, maar hij had nog geen koffiezetapparaat.</p>
+        <p>Toen zei Jori dat hij wel een koffieapparaat had en dat hij om de hoek woonde.</p>
+        <p>Dus na een tijdje besloten we om naar Jori zn kamer te lopen om een kopje koffie te zetten.</p>
+        <br>
+        <p>We moeten ook nog een klein stukje omlopen omdat Jori een Pokémon moest vangen.</p>
+        <br>
+        <p>Eenmaal aangekomen bij Jori zn kleine kamer zagen we dat hij ook een heel klein apparaatje had.</p>
+        <p>Hij kon namelijk maar <strong>anderhalf kopje</strong> zetten.</p>
+        <p>Maar dat was geen probleem, want ik was toch de enige die koffie wou.</p>
+        <p>Toen zei Justin dat hij ook wel wat koffie lustte..</p>
+        <p>..maar hij hoefde maar een half kopje, dus dat kon Jori nog net zetten.</p>
+        <br>
+        <p>Dat was het</p>
+        <br>
+        <br>
+        <p><strong>Sidequests:</strong></p>
+        <p>1. Justin sprong uit het raam en we deden toen het raam dicht.</p>
+        <br>
+        <p>2. Jori had precies 4 chocoladekoekjes en we waren ook met zijn vieren.</p>
+        <br>
+        <p>3. Er hing een raar apparaatje aan de muur bij Jori, dus ik vroeg wat dat was.</p>
+        <p>Toen zei hij dat dat een anti-tijger alarm was, maar dat kan niet want ik kwam wel gewoon binnen.</p>
+        <p><i>Correctie door Jori (27/11): "Its not a fucking anti-tijger alarn" "Its a apparaat" "Fucken get it right"</i></p>
+        <p></p>
+        <p></p>
+        <p></p>
+</center>
+-->
+
+<!-- Featured image
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">FEATURED IMAGE</span></h5>
+      <center><img src="why.jpg" alt="Guus Why" style="width:100%;max-width:400px"></center>
+  </div>
+</div> -->
+
+<!--
+ Menu Container
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>
+    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+-->
+
+<!-- Contact/Area Container
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <div id="googleMap" class="w3-sepia" style="width:100%;height:400px;"></div>
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+-->
+
+<!-- End page content -->
+</div>
+
+<!-- Footer
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>
+
+  </p>
+</footer>
+-->
+</body>
+</html>
